@@ -7,7 +7,9 @@
         <div class="header_inner">
             <div class="header_logo">
                 <h1>
-                    <a href="#">KISES<em>한 국 보 안 연 구 원</em></a>
+                    <a href="#">&#128274; KISES
+                    <!--<em>한 국 보 안 교 육 원</em>!-->
+                    </a>
                 </h1>
             </div>
             <nav 
@@ -69,25 +71,25 @@
    z-index: 10000;
 }
 .header_inner {
-   @include flex-between;
-   background-color: rgba(23, 242, 227, 0.1);
+    @include flex-between;
+    background-color: rgba(232, 6, 240, 0.1);
     backdrop-filter: blur(15px);
-    padding: 1rem;
+    padding: 1rem; // 메뉴바(box) 크기
 
     .header_logo {
-        font-size: 1rem;
-        text-align: center;
-        text-transform: uppercase;
-        line-height: 1;
+        font-size: 1.2rem;
+        text-align: center; // 한국보안교육원 글씨 위치 
+        text-transform: uppercase; // 로고 대문자(uppercase) 및 소문자(lowercase)
+        line-height: 1; // 상단 메뉴바 box 크기 
 
         em {
-            font-size: 10px;
-            display: block;
+            font-size: 18px; // 한국보안교육원 글씨 크기
+            display: block; // 한국보안교육원 글씨 위치
             color: var(--black200); 
         }
     }
     .header_nav {
-        @media (max-width: 800px){
+        @media (max-width: 800px) { // 창 최소화 시 메뉴버튼 생성(800px)
             display: none;
 
             &.show {
@@ -98,7 +100,7 @@
                     position: absolute;
                     right: 0;
                     top: 68px;
-                    background-color: rgba(116, 99, 99, 0.1);
+                    background-color: rgba(192, 27, 49, 0.1);
                     backdrop-filter: blur(15px);
                     z-index: 10000;
                     min-width: 150px;
@@ -110,7 +112,7 @@
                         
                         a{
                             display: inline-block;
-                            padding: 10px;  
+                            padding: 10px;
                         }
                     }
                 }

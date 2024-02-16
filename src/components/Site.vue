@@ -6,7 +6,7 @@
    <section id="site">
             <div class="site_inner">
                 <h2 class="site_title">
-                    학습목표 <em>어떤 것을 배우게 되나요?</em>
+                    학습과정 <em>어떤 것을 배우게 되나요?</em>
                 </h2>
                 <div class="site_wrap">
                     <article class="site_item s1" v-for="(site, key) in siteText" :key="key">

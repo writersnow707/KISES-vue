@@ -11,17 +11,19 @@
                 <div class="skill_desc">
                     <div v-for="(skill, key) in skillText" :key="key">
                         <span>{{key+1}}.</span>
+                        <img v-bind:src="skill.img" />
                         <h3>{{ skill.title }}</h3>
-                        <p>{{ skill.desc }}</p>  
+                        <p>{{ skill.desc }}</p>
                      </div>                  
                 </div>                
             </div>
         </section>
 </template>
+
 <style lang="scss">
     .skill_inner{
     padding: 16px;
-    display: flex;
+    display: flex; // 소개글 위치 조정?
     justify-content: space-between;
 
     @media(max-width: 800px){        
@@ -29,8 +31,8 @@
         }
 
     .skill_title{
-        position: sticky;
-        top: 70px;
+        position: sticky; // 제목 위치
+        top: 80px;
         left: 0;
         width: 48%;
         height: 5vw;
