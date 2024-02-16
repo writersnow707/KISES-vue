@@ -1,33 +1,34 @@
 <script setup>
-    import { siteText } from '../constants';
+    import { curriculumText } from '../constants';
 </script>
 
 <template>
-   <section id="site">
-            <div class="site_inner">
-                <h2 class="site_title">
+   <section id="curriculum">
+            <div class="curriculum_inner">
+                <h2 class="curriculum_title">
                     학습과정 <em>어떤 것을 배우게 되나요?</em>
                 </h2>
-                <div class="site_wrap">
-                    <article class="site_item s1" v-for="(site, key) in siteText" :key="key">
-                        <span class="num">{{key+1}}.</span>
-                        <div class="text">
-                            <div>{{site.text[0]}}</div>
-                            <div>{{site.text[1]}}</div>
-                            <div>{{site.text[2]}}</div>
+                <div class="curriculum_wrap">
+                    <article class="curriculum_item s1" v-for="(curriculum, key) in curriculumText" :key="key">
+                        <span class="num">{{key+1}}. {{ curriculum.title }}</span>
+                        <h2 class="title">
+                           {{ curriculum.textTitle }}<br><br>
+                        </h2>
+                        <div class="subhead">
+                           <!--<img class="img" v-bind:src="curriculum.img" />-->
+                           Ⅰ.{{ curriculum.textSubheading[0] }}<br>
+                           Ⅱ.{{ curriculum.textSubheading[1] }}<br>
+                           Ⅲ.{{ curriculum.textSubheading[2] }}<br>
                         </div>
-                        <h3 class="title">
-                            {{site.title}}
-                        </h3>
-                        <div class="btn">
-                            <a :href="site.code">code</a>
-                            <a :href="site.view">view</a>
+                        <!-- <div class="btn">
+                            <a :href="curriculum.code">code</a>
+                            <a :href="curriculum.view">view</a>
                         </div>
                         <div class="info">
-                            <span>{{site.info[0]}}</span>
-                            <span>{{site.info[1]}}</span>
-                            <span>{{site.info[2]}}</span>
-                        </div>
+                            <span>{{curriculum.info[0]}}</span>
+                            <span>{{curriculum.info[1]}}</span>
+                            <span>{{curriculum.info[2]}}</span>
+                        </div> -->
                     </article>                                    
                 </div>
             </div>
@@ -37,10 +38,10 @@
 <style lang="scss">
 @import "@/assets/scss/mixin";
 
-    .site_inner{
+   .curriculum_inner{
         padding: 16px;
 
-   .site_title{
+   .curriculum_title{
       position: sticky;
       top: 70px;
       left: 0;
@@ -72,9 +73,9 @@
      }
    }
 
-   .site_wrap{
-      .site_item{
-         height: 70vh;
+   .curriculum_wrap{
+      .curriculum_item{
+         height: 70vh; // 박스 높이
          background-color: #ccc;
          @include flex-center;
          flex-direction: column;
@@ -113,11 +114,10 @@
                top: 200px; 
             }
          }
-         
          .num{
-            font-size: 5vw;
+            font-size: 4vw;
             line-height: 1;
-            font-weight: 900;
+            font-weight: 600;
             font-family: var(--mainKor-font);
             position: absolute;
             left: 1vw;
@@ -128,8 +128,8 @@
                left: 20px;
                top: 20px;
             }
-        }
-        .text{
+        } 
+        /* .text{
          text-align: center;
          margin-bottom: 1rem;
 
@@ -144,11 +144,24 @@
                   font-size: 26px;
                }
             }
-         }
+         } */
          .title{
             font-family: var(--mainKor-font);
-            margin-bottom: 1rem;
+            margin-bottom: 20rem;
+            text-align:center;
+            
+            /* img { // 박스 내의 이미지를 구성
+               position: sticky;
+               border-radius: 50px;
+               max-width: 500px;
+               max-height: 35vh;
+            } */
          }
+         /*
+         .subhead {
+            display: flex;
+            justify-content: space-between;
+         }*/
          .btn {
             a {
                text-decoration: underline;

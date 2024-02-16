@@ -1,14 +1,14 @@
 <script setup>
-    import { introText } from '../constants';
+    import { titleText } from '../constants';
 </script>
 
 <template>
-    <section id="intro">
-            <div class="intro_inner">
-                <h2 class="intro_title">
-                    <div>{{ introText.title }}</div>
+    <section id="title">
+            <div class="title_inner">
+                <h2 class="title_title">
+                    <div>{{ titleText.title }}</div>
                 </h2>
-                <div class="intro_lines" aria-hidden="true">
+                <div class="title_lines" aria-hidden="true">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
@@ -17,16 +17,16 @@
                     <span class="line"></span>
                     <span class="line"></span>
                 </div>
-                <div class="intro_text">
+                <div class="title_text">
                     <div class="text">
-                        <div>{{ introText.desc[0] }}</div>
-                        <div>{{ introText.desc[1] }}</div>
+                        <div>{{ titleText.desc[0] }}</div>
+                        <div>{{ titleText.desc[1] }}</div>
                     </div>
                     <div class="img">
                         <img src="@/assets/img/about.jpg" alt="about me">
                     </div>
                 </div> 
-                <div class="intro_lines bottom" aria-hidden="true">
+                <div class="title_lines bottom" aria-hidden="true">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
@@ -40,11 +40,11 @@
 </template>
 
 <style lang="scss">
-    #intro{
-    height: 70vh; // Header와 Intro의 간격
+    #title{
+    height: 70vh; // Header와 title의 간격
     
 }
-.intro_inner {
+.title_inner {
     width: 100%;
     height: 100%;
     display: flex;
@@ -57,7 +57,7 @@
         justify-content: center;
     }
 
-    .intro_title {
+    .title_title {
         font-size: 3vw;
         //text-align: center;
         // text-transform: uppercase; 글자 대/소문자 구분
@@ -71,7 +71,7 @@
             display: none;
         }
     }
-    .intro_text {
+    .title_text {
         width: 100%;
         height: 40vh; // 줄 상자 높이(맨 밑 큰 검은 상자)
         background-color: var(--black); // 큰 상자 색 조정
@@ -125,7 +125,7 @@
             filter: grayscale(0); 
         }
     }
-       .intro_lines {
+       .title_lines {
         width: 100%;
 
         .line{

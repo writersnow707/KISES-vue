@@ -1,19 +1,19 @@
 <script setup>
-    import { skillText } from '../constants';
+    import { introText } from '../constants';
 </script>
 
 <template>
-     <section id="skill">
-            <div class="skill_inner">
-                <h2 class="skill_title">
-                    KISES 이란?<em></em>
+     <section id="intro">
+            <div class="intro_inner">
+                <h2 class="intro_title">
+                    KISES 소개<em></em>
                 </h2>
-                <div class="skill_desc">
-                    <div v-for="(skill, key) in skillText" :key="key">
+                <div class="intro_desc">
+                    <div v-for="(intro, key) in introText" :key="key">
                         <span>{{key+1}}.</span>
-                        <img v-bind:src="skill.img" />
-                        <h3>{{ skill.title }}</h3>
-                        <p>{{ skill.desc }}</p>
+                        <img v-bind:src="intro.img" />
+                        <h3>{{ intro.title }}</h3>
+                        <p>{{ intro.desc }}</p>
                      </div>                  
                 </div>                
             </div>
@@ -21,7 +21,7 @@
 </template>
 
 <style lang="scss">
-    .skill_inner{
+    .intro_inner{
     padding: 16px;
     display: flex; // 소개글 위치 조정?
     justify-content: space-between;
@@ -30,7 +30,7 @@
             flex-direction: column;
         }
 
-    .skill_title{
+    .intro_title{
         position: sticky; // 제목 위치
         top: 80px;
         left: 0;
@@ -59,7 +59,7 @@
             line-height: 2;
         }
     }
-    .skill_desc{
+    .intro_desc{
         width: 50%;
 
         @media(max-width: 800px){

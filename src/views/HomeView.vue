@@ -1,9 +1,9 @@
 <script setup>
 import Skip from "@/components/Skip.vue";
 import Header from "@/components/Header.vue";
-import Intro from "@/components/Intro.vue";
-import Skill from "@/components/Skill.vue";
-import Site from "@/components/Site.vue";
+import TitleVue from "@/components/TitleVue.vue";
+import IntroVue from "@/components/IntroVue.vue";
+import CurriculumVue from "@/components/CurriculumVue.vue";
 import Port from "@/components/Port.vue";
 import Contact from "@/components/Contact.vue";
 import Footer from "@/components/Footer.vue";
@@ -13,9 +13,9 @@ import Footer from "@/components/Footer.vue";
   <Skip />
   <Header />
   <main id="main" role="main">
-    <Intro />
-    <Skill />
-    <Site />
+    <TitleVue />
+    <IntroVue />
+    <CurriculumVue />
     <Port />
     <Contact />
   </main>

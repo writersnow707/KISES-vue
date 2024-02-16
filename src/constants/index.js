@@ -9,22 +9,24 @@ import port07 from "../assets/img/port07.jpg";
 import port08 from "../assets/img/port08.jpg";
 import port09 from "../assets/img/port09.jpg";
 import port10 from "../assets/img/port10.jpg";
+import curtestimg01 from "../assets/img/cur_test_img01.jpg";
+import curtestimg02 from "../assets/img/cur_test_img02.jpg";
 
 export const headerNav = [
   {
-    title: "intro",
+    title: "title",
+    url: "#title",
+  },
+  {
+    title: "KISES 소개",
     url: "#intro",
   },
   {
-    title: "KISES이란?",
-    url: "#skill",
+    title: "학습과정",
+    url: "#curriculum",
   },
   {
-    title: "학습 목표",
-    url: "#site",
-  },
-  {
-    title: "학습 과정",
+    title: "실습실",
     url: "#port",
   },
   {
@@ -33,13 +35,13 @@ export const headerNav = [
   },
 ];
 
-export const introText = {
+export const titleText = {
   title: "Korea Institute of Security Education Service",
   desc: ["사이버 보안 교육의 첫 걸음", "KISES이 함께 나아가겠습니다."],
   img: about,
 };
 
-export const skillText = [
+export const introText = [
   {
     title: "안전한 사이버 보안의 시작, 올바른 보안 교육으로부터",
     desc: "갈수록 사이버 보안 경각심이 늘어나는 현재, 2015 개정 교육과정으로 ‘정보’ 과목이 의무교육이 되었습니다. 허나 안타깝게도, 해당 교육에서는 사이버 보안 교육에 대한 내용을 거의 가르치지 않고 있습니다. KISES은 이러한 문제를 극복하기 위해 사이버 보안 교육을 중점으로 한 사이트를 만들자는 취지에서 개설하게 되었습니다.",
@@ -47,7 +49,7 @@ export const skillText = [
   },
   {
     title: "체험을 통해 알아보는 사이버 공격의 위험성",
-    desc: "KISES에서는 초등학생부터 고등학생까지, 다양하면서도 중요한 사이버 공격들을 이해하며 이를 체험해 봄으로써 해당 공격들의 위험성과 이에 대한 대응책들을 의논 및 토론하는 시간을 갖고 사이버 보안에 대한 경각심을 심어주는 데에 목적을 두고 있습니다.",
+    desc: "KISES에서는 초등학생부터 고등학생까지, 다양하면서도 중요한 사이버 공격들을 이해하며 이를 모의 체험해 봄으로써 해당 공격들의 위험성과 이에 대한 대응책들을 의논 및 토론하는 시간을 갖고 사이버 보안에 대한 경각심을 심어주는 데에 목적을 두고 있습니다.",
     img: port02,
   },
   {
@@ -56,10 +58,12 @@ export const skillText = [
     img: port03,
   },
 ];
-export const siteText = [
+export const curriculumText = [
   {
-    text: ["A", "B", "C"],
-    title: "수정 중입니다.",
+    title: "기초 교육",
+    textTitle: "스마트폰에 대한 사이버 범죄 유형을 중점으로 학습합니다.",
+    textSubheading: ["피싱(Phishing)", "스미싱(Smishing)", "큐싱(QShing)"],
+    img: curtestimg01,
     code: "https://github.com/writersnow707",
     view: "https://github.com/writersnow707",
     info: [
@@ -69,8 +73,10 @@ export const siteText = [
     ],
   },
   {
-    text: ["A", "B", "C"],
-    title: "수정 중입니다.",
+    title: "심화 교육",
+    textTitle: "컴퓨터에 대한 사이버 범죄 유형을 중점으로 학습합니다.",
+    textSubheading: ["컴퓨터 바이러스(Computer Virus)", "좀비 PC(Zombie PC)", "랜섬웨어(Ransomware)"],
+    img: curtestimg02,
     code: "https://github.com/writersnow707",
     view: "https://github.com/writersnow707",
     info: [
@@ -131,36 +137,16 @@ export const footerText = [
   {
     title: "youtube",
     desc: "유튜브에 오시면 더 많은 강의를 볼 수 있습니다.",
-    link: "https://www.youtube.com/@Webstoryboy",
+    link: "https://www.youtube.com/",
   },
   {
     title: "github",
     desc: "깃헙에 오시면 더 많은 소스를 볼 수 있습니다.",
-    link: "https://github.com/webstoryboy",
+    link: "https://github.com/writersnow707",
   },
   {
     title: "blog",
-    desc: "블러그에 오시면 더 많은 정보를 볼 수 있습니다.",
-    link: "https://webstoryboy.co.kr",
-  },
-  {
-    title: "gsap",
-    desc: "GSAP에 오시면 더 많은 강의를 볼 수 있습니다.",
-    link: "https://www.youtube.com/playlist?list=PL4UVBBIc6giL8-6jvrClimg0cFL-Muqiq",
-  },
-  {
-    title: "react",
-    desc: "리액트로 만든 사이트를 같이 만들어 봅니다.",
-    link: "https://github.com/webstoryboy/port2023-react",
-  },
-  {
-    title: "vue",
-    desc: "뷰로 만든 사이트를 같이 만들어 봅니다.",
-    link: "https://github.com/webstoryboy/port2023-vue",
-  },
-  {
-    title: "next",
-    desc: "넥스트로 만든 사이트를 같이 만들어 봅니다.",
-    link: "https://github.com/webstoryboy/port2023-next",
+    desc: "블로그에 오시면 더 많은 정보를 볼 수 있습니다.",
+    link: "https://blog.naver.com/writtensnow",
   },
 ];
