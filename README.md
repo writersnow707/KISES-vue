@@ -1,6 +1,6 @@
 # kises
 
-This Project is Website by Korea Institute of Security Education Service(KISES), is a security education website for the element, middle, high student.
+This Project is Website by Korea Institute of Security Education Service(KISES), is a security education website for the element, middle, high school students.
 
 ## Project Execution
 
